@@ -31,6 +31,7 @@ void MainWindow::on_loginbutton_clicked()
     int count = mydb.user_login(username, password);
     if (count == 1)
     {
+ //when login successful show menu window and show userdata on menu window
         ui->loginmessagelabel->setText("Successful login");
         menu *usermenu = new menu;
         usermenu->show();

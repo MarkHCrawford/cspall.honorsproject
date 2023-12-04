@@ -8,6 +8,7 @@
 struct userData
 {
     QString username, password, profile, firstname, lastname;
+    int coursescompletecpp, coursescompletepython;
 };
 
 

@@ -13,17 +13,22 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     menu.cpp \
+    quiz.cpp \
+    quizdb.cpp \
     signup.cpp
 
 HEADERS += \
     db_connect.h \
     mainwindow.h \
     menu.h \
+    quiz.h \
+    quizdb.h \
     signup.h
 
 FORMS += \
     mainwindow.ui \
     menu.ui \
+    quiz.ui \
     signup.ui
 
 # Default rules for deployment.

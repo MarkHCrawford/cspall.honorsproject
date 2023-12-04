@@ -10,18 +10,22 @@
 
 opendatabase::opendatabase()
 {
+
+//set database object, database type, database name (local storage for now)
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
     db.setDatabaseName("C:\\Users\\Ender Crowing\\Documents\\sqlite\\cspall");
     bool ok = db.open();
+//debug to console for testing
     if(ok){qDebug() << "All good";}
     else {qDebug() << "bad: " << db.lastError();}
 }
 
+//close db on object destruction
 opendatabase::~opendatabase(){db.close();}
 
 
 
-
+//on login, does user exist?
 bool opendatabase::is_existing_user(QString username)
 {
     int user_count = 0;
@@ -89,14 +93,16 @@ bool opendatabase::insert_user(QString username, QString password, QString profi
                        "profile, "
                        "firstname, "
                        "lastname, "
-                       "coursescompletecpp) "
-                       "values (?,?,?,?,?,?,?)");
+                       "coursescompletecpp, "
+                        "coursescompletepython)"
+                       "values (?,?,?,?,?,?,?,?)");
     create_user.addBindValue(max_id_num);
     create_user.addBindValue(username);
     create_user.addBindValue(password);
     create_user.addBindValue(profile);
     create_user.addBindValue(firstname);
     create_user.addBindValue(lastname);
+    create_user.addBindValue(0);
     create_user.addBindValue(0);
     create_user.exec();
     return true;
@@ -114,6 +120,8 @@ userData opendatabase::get_user_data()
             userdata.profile = get_user_data.value(3).toString();
             userdata.firstname = get_user_data.value(4).toString();
             userdata.lastname = get_user_data.value(5).toString();
+            userdata.coursescompletecpp = get_user_data.value(6).toInt();
+            userdata.coursescompletepython = get_user_data.value(7).toInt();
         }
      }
     return userdata;

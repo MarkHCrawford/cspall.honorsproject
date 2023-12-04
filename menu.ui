@@ -79,7 +79,7 @@
    <property name="title">
     <string>Language Select</string>
    </property>
-   <widget class="QComboBox" name="comboBox">
+   <widget class="QComboBox" name="languagedropdown">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -90,22 +90,12 @@
     </property>
     <item>
      <property name="text">
-      <string>C++</string>
+      <string>cpp</string>
      </property>
     </item>
     <item>
      <property name="text">
-      <string>Javascript</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>HTML</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Python</string>
+      <string>python</string>
      </property>
     </item>
    </widget>
@@ -122,7 +112,7 @@
    <property name="title">
     <string>Difficulty</string>
    </property>
-   <widget class="QComboBox" name="comboBox_2">
+   <widget class="QComboBox" name="difficultydropdown">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -133,22 +123,17 @@
     </property>
     <item>
      <property name="text">
-      <string>Beginner</string>
+      <string>beginner</string>
      </property>
     </item>
     <item>
      <property name="text">
-      <string>Intermediate</string>
+      <string>intermediate</string>
      </property>
     </item>
     <item>
      <property name="text">
-      <string>Advanced</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Expert</string>
+      <string>advanced</string>
      </property>
     </item>
    </widget>
@@ -321,6 +306,78 @@
    </property>
    <property name="text">
     <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="coursescomplete">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>370</y>
+     <width>171</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Courses Completed:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="coursescompletelabel">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>380</y>
+     <width>71</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="course">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>330</y>
+     <width>71</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Course:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="courselabel">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>330</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
    </property>
   </widget>
  </widget>
