@@ -15,6 +15,7 @@ quiz::quiz(QWidget *parent)
     , ui(new Ui::quiz)
 {
     ui->setupUi(this);
+    this->setWindowTitle("CSPall Quiz");
 }
 
 quiz::~quiz()

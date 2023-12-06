@@ -10,6 +10,16 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+//title of window
+    this->setWindowTitle("CSPall Login");
+//load images onto labels using pixmap
+    QPixmap pm("C:\\Users\\Ender Crowing\\Documents\\cspall\\icons8-c++-96.png");
+    QPixmap pm2("C:\\Users\\Ender Crowing\\Documents\\cspall\\icons8-python-96.png");
+    ui->label_3->setPixmap(pm);
+    ui->label->setPixmap(pm2);
+    ui->label_3->setScaledContents(true);
+    ui->label->setScaledContents(true);
+
 
 }
 

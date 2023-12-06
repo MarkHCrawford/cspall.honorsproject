@@ -10,7 +10,7 @@ menu::menu(QWidget *parent)
     , ui(new Ui::menu)
 {
     ui->setupUi(this);
-
+    this->setWindowTitle("CSPall");
 }
 
 menu::~menu()

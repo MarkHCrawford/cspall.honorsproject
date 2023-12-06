@@ -5,6 +5,7 @@
 #include <QMainWindow>
 #include <QtSql>
 #include <db_connect.h>
+#include <QPixmap>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
