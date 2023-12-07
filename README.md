@@ -22,7 +22,7 @@ C++
 ## Project Links
 [Project Site](https://sites.google.com/view/cspall/home?authuser=0) \
 [Project Video](https://youtu.be/ryXRx8KPdUc) \
-[Project Document](https://docs.google.com/document/d/1fB6jLUJMLBAVCrJR3jV7rCOBVbGPMiTaoflvPk3H8x4/edit?usp=sharing) \
+[Project Document](https://docs.google.com/document/d/1fB6jLUJMLBAVCrJR3jV7rCOBVbGPMiTaoflvPk3H8x4/edit?usp=sharing) 
 
 
 
