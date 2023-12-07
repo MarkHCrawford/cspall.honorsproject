@@ -4,17 +4,10 @@
 #include "QDebug"
 
 //constructor, call parent object to ensure db is open
-quizdb::quizdb(){
-//set database object, database type, database name (local storage for now)
-    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("C:\\Users\\Ender Crowing\\Documents\\sqlite\\cspall");
-    bool ok = db.open();
-//debug to console for testing
-    if(ok){qDebug() << "All good";}
-    else {qDebug() << "Error: " << db.lastError();}
+quizdb::quizdb() : opendatabase(){
     score = 0;}
 
-quizdb::~quizdb(){db.close();}
+quizdb::~quizdb(){}
 
 
 //pull questions from database

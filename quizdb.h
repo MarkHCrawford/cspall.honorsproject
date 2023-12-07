@@ -1,6 +1,7 @@
 #ifndef QUIZDB_H
 #define QUIZDB_H
 
+#include "db_connect.h"
 #include <QApplication>
 #include <QTSql>
 #include <array>
@@ -11,8 +12,8 @@ struct questiondata
     QString question, option_a, option_b, option_c, answer;
 };
 
-
-class quizdb
+//inheritance
+class quizdb : public opendatabase
 {
 public:
     quizdb();

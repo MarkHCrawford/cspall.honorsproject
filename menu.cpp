@@ -18,7 +18,7 @@ menu::~menu()
     delete ui;
 }
 
-
+//go back to login if logout clicked
 void menu::on_logoutbutton_clicked()
 {
     MainWindow *win = new MainWindow;
@@ -26,6 +26,8 @@ void menu::on_logoutbutton_clicked()
     this->hide();
 }
 
+
+//show user data on main menu: username, first, last, default course, default courses completed
 void menu::showdata(QString username)
 {
     if(this->isActiveWindow())
@@ -50,6 +52,7 @@ void menu::showdata(QString username)
     }
 }
 
+//start quiz
 void menu::on_startbutton_clicked()
 {
     QString course = ui->languagedropdown->currentText();
@@ -70,7 +73,7 @@ void menu::on_startbutton_clicked()
 
 
 
-
+//update labels with course and course completed number when dropdown changed
 void menu::on_languagedropdown_activated(int index)
 {
     if (index == 0)

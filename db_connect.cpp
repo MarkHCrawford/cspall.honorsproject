@@ -14,10 +14,20 @@ opendatabase::opendatabase()
 //set database object, database type, database name (local storage for now)
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
     db.setDatabaseName("C:\\Users\\Ender Crowing\\Documents\\sqlite\\cspall");
-    bool ok = db.open();
-//debug to console for testing
-    if(ok){qDebug() << "All good";}
-    else {qDebug() << "bad: " << db.lastError();}
+//exception handling when opening database
+    if (!db.open()){throw "Error opening database";}
+    try
+    {
+        db.open();
+        qDebug() << "Database connected." << Qt::endl;
+    }
+    catch (const QString errormsg)
+    {
+        qDebug() << "Error: " + errormsg << Qt::endl;
+        qDebug() << db.lastError() << Qt::endl;
+    }
+
+
 }
 
 //close db on object destruction

@@ -116,6 +116,7 @@ void quiz::on_quizsubmitbutton_clicked()
     {
         QMessageBox::about(this, "Warning", "No options were selected");
     }
+//correct answer? add score
     else if (ui->optionabutton->isChecked() && ui->optionabutton->text() == quizdatabase.quiz_questions.at(question_count).answer)
     {
         quizdatabase.add_score();
@@ -132,6 +133,7 @@ void quiz::on_quizsubmitbutton_clicked()
     {
         quizdatabase.add_score();
     }
+//dialogue box showing correct answer if incorrect
     else
     {
         QMessageBox::about(this, "Wrong answer","The correct answer is: " +
