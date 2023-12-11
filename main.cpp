@@ -1,5 +1,4 @@
 #include "mainwindow.h"
-#include "signup.h"
 #include <QApplication>
 #include <db_connect.h>
 #include <QFile>

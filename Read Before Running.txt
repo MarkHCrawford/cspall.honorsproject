@@ -1,0 +1,20 @@
+CSPALL
+Mark Crawford
+CSC211H - Prof Azhar
+Fall 2023, Honors Project
+
+Built in QT Creator 12.0 using QT 6.6.0
+Database: SQLite3
+Language: C++
+
+To run:
+Unzip with all project files. 
+When building, you must move the cspall.db into the build folder.
+If you do not move cspall.db into the build folder, a new database will be created.
+
+To move cspall.db:
+1) Look in the bottom left of QT Creator, check build version. Debug? Profile? Release?
+2) Click the hammer to build project.
+3) Go to project build folder (either debug, profile, or release depending on project version)
+4) Right-click and copy cspall.db in the original project folder and paste into build folder
+5) Program should function normally

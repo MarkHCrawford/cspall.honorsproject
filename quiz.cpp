@@ -46,6 +46,7 @@ void quiz::get_question()
     ui->optioncbutton->setText(question_options_random[2]);
     ui->optiondbutton->setText(question_options_random[3]);
     ui->getscorelabel->setText(QString::number(quizdatabase.get_score()));
+
 }
 
 
@@ -120,18 +121,30 @@ void quiz::on_quizsubmitbutton_clicked()
     else if (ui->optionabutton->isChecked() && ui->optionabutton->text() == quizdatabase.quiz_questions.at(question_count).answer)
     {
         quizdatabase.add_score();
+        ui->optionabutton->setAutoExclusive(false);
+        ui->optionabutton->setChecked(false);
+        ui->optionabutton->setAutoExclusive(true);
     }
     else if (ui->optionbbutton->isChecked() && ui->optionbbutton->text() == quizdatabase.quiz_questions.at(question_count).answer)
     {
         quizdatabase.add_score();
+        ui->optionbbutton->setAutoExclusive(false);
+        ui->optionbbutton->setChecked(false);
+        ui->optionbbutton->setAutoExclusive(true);
     }
     else if (ui->optioncbutton->isChecked() && ui->optioncbutton->text() == quizdatabase.quiz_questions.at(question_count).answer)
     {
         quizdatabase.add_score();
+        ui->optioncbutton->setAutoExclusive(false);
+        ui->optioncbutton->setChecked(false);
+        ui->optioncbutton->setAutoExclusive(true);
     }
     else if (ui->optiondbutton->isChecked() && ui->optiondbutton->text() == quizdatabase.quiz_questions.at(question_count).answer)
     {
         quizdatabase.add_score();
+        ui->optiondbutton->setAutoExclusive(false);
+        ui->optiondbutton->setChecked(false);
+        ui->optiondbutton->setAutoExclusive(true);
     }
 //dialogue box showing correct answer if incorrect
     else
@@ -144,7 +157,7 @@ void quiz::on_quizsubmitbutton_clicked()
     question_count++;
 
     //check if last question
-    if (question_count == 9)
+    if (question_count == 10)
     {
         end_of_quiz();
     }
