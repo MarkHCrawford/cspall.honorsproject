@@ -29,4 +29,5 @@ More languages \
 Interface update 
 
 ## Other Info
-Made by Mark Crawford for Prof. Azhar's CSC211H class, Fall 2023.
+Made by Mark Crawford for Prof. Azhar's CSC211H class, Fall 2023. \
+Please read text file "read before running," you must copy database file into the build folder, otherwise a new, empty database will be created -- working on fixing issue.
